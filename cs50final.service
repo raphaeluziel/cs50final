@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance to serve cs50final
+After=network.target
+
+[Service]
+User=raphaeluziel
+Group=www-data
+WorkingDirectory=/home/raphaeluziel/cs50final
+Environment="PATH=/home/raphaeluziel/cs50final/booksenv/bin"
+ExecStart=/home/raphaeluziel/cs50final/cs50finalenv/bin/gunicorn --workers 1 --bind unix:cs50final.sock -m 007 wsgi:app
+
+
+[Install]
+WantedBy=multi-user.target
