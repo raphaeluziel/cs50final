@@ -47,9 +47,6 @@ Session(app)
 
 
 # Configure CS50 Library to use SQLite database
-#db = SQL("sqlite:///final.db")
-#db = SQL(os.environ.get("DATABASE_URL") or "sqlite://final.db")
-# For raphaeluziel.net (REPLACE PASSWORD WITH PASSWORD)
 db = SQL(os.getenv("QUOTESDB_URL"))
 
 
