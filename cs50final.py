@@ -20,6 +20,7 @@ load_dotenv()
 # Configure application
 app = Flask(__name__)
 
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 # Check for environment variable
 if not os.getenv("QUOTESDB_URL"):
