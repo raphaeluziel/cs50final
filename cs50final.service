@@ -6,8 +6,8 @@ After=network.target
 User=raphaeluziel
 Group=www-data
 WorkingDirectory=/home/raphaeluziel/cs50final
-Environment="PATH=/home/raphaeluziel/cs50final/cs50env/bin"
-ExecStart=/home/raphaeluziel/cs50final/cs50env/bin/gunicorn --workers 1 --bind unix:cs50final.sock -m 007 wsgi:app
+Environment="PATH=/home/raphaeluziel/cs50final/venv/bin"
+ExecStart=/home/raphaeluziel/cs50final/venv/bin/gunicorn --workers 1 --bind unix:cs50final.sock -m 007 wsgi:app
 
 
 [Install]
